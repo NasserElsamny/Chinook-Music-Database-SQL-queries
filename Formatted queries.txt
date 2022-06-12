@@ -1,0 +1,58 @@
+Query 1: Who is writing the rock music?
+
+SELECT a.Name,
+       COUNT(*)
+FROM Artist a
+JOIN Album al ON a.ArtistId = al.ArtistId
+JOIN Track t ON t.AlbumId = al.AlbumId
+JOIN Genre g ON t.GenreId = g.GenreId
+WHERE g.Name = 'Rock'
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+
+Query 2: Top 10 earning artist
+
+SELECT a.Name,
+       SUM(i.Quantity * i.UnitPrice) Earnings
+FROM Artist a
+JOIN Album al ON a.ArtistId = al.ArtistId
+JOIN Track t ON t.AlbumId = al.AlbumId
+JOIN InvoiceLine i ON t.TrackId = i.TrackId
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+
+Query 3: Who is the best customer?
+
+SELECT c.FirstName || ' ' || c.LastName Customer_Name,
+       c.CustomerId,
+       SUM(il.UnitPrice*il.Quantity) Total_Spent
+FROM Customer c
+JOIN Invoice i ON c.CustomerId = i.CustomerId
+JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
+GROUP BY 1
+ORDER BY 3 DESC
+LIMIT 10;
+
+Query 4: Which city has the best customers?
+
+SELECT c.City,
+       SUM(il.UnitPrice*il.Quantity) Total_Spent
+FROM Customer c
+JOIN Invoice i ON c.CustomerId = i.CustomerId
+JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 5;
+
+Query 5: Media Types mostly used
+
+SELECT m.Name, COUNT(*) purchases
+FROM MediaType m
+JOIN Track t
+ON m.MediaTypeId=t.MediaTypeId
+JOIN InvoiceLine il
+ON il.TrackId=t.TrackId
+GROUP BY 1
+ORDER BY 2 DESC
