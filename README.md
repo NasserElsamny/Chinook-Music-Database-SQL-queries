@@ -12,8 +12,13 @@ that link tables together via the arrows.
 
 ## Questions
 The queries written are trying to answer these questions:
+
 1.Which artitsts had most rock tracks?
+
 2.Top 10 earning artist
+
 3.Who is the best customer?
+
 4.Which city has the best customers?
+
 5.What Media Types mostly used?
