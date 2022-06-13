@@ -1,4 +1,4 @@
-Query 1: Which artitsts had most rock tracks?
+##Query 1: Which artitsts had most rock tracks?
 
 SELECT a.Name,
        COUNT(*)
