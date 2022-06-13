@@ -2,10 +2,7 @@
 Chinook Music Store Database  - SQL
 
 ## Introduction
-In this project, we will query the Chinook Music Database. The Chinook Database holds information about
-a music store. For this project, you will be assisting the Chinook team with understanding the media
-in their store, their customers and employees, and their invoice information. To assist you in the
-queries ahead, the schema for the Chinook Database is provided below. You can see the columns
+In this project, we will query the Chinook Digital Music Store Database. You will be assisting the Chinook team in answering questions about their media, sales, customers, and more.To assist you in the queries ahead, the schema for the Chinook Database is provided below. You can see the columns
 that link tables together via the arrows.
 
 ![image](https://user-images.githubusercontent.com/82735161/168489669-1cd498f5-f4df-40b5-81be-b70fb7416362.png)
