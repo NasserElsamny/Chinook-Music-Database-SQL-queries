@@ -1,5 +1,5 @@
-# Chinook-Music-Database-SQL-Queries
-Chinook Music Store Database  - SQL
+# Query Chinook Digital Music Store Database - SQL
+Query Chinook Digital Music Store Database  - SQL
 
 ## Introduction
 In this project, we will query the Chinook Digital Music Store Database. You will be assisting the Chinook team in answering questions about their media, sales, customers, and more.To assist you in the queries ahead, the schema for the Chinook Database is provided below. You can see the columns
